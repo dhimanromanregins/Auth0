@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="leftcolumn">
+        
+        {% for item in blog_blog reversed %}
+        <a href="/single_blog/{{item.id}}">
+        <div class="card">
+            
+            <h2>{{item.title}}</h2>
+            <h5>{{item.created_at}}<h5>
+            <h2>{{item.body|truncatewords:20}}</h2>               
+        </div>
+        <button herf="#">read more</button>
+        {%endfor%}
+    </a>
+    
+    </div>    
+</div>
+
+{% endblock %}
